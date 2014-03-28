@@ -1,0 +1,6 @@
+<% provide(:title, 'Edit') %>
+
+<div class = "jumbotron">
+    <h1>Edit Settings</h1>
+    <%= render 'form' %>
+</div>

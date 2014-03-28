@@ -1,0 +1,30 @@
+<div class = "jumbotron" id = "index_main">
+    <h1><span id = "logo">N<font size = "12">L</font></span>&nbsp;<b>Next</b>List</h1>
+    <div id = "small_box"></div>
+</div>
+</br>
+<div class = "container" ng-controller="UsersCtrl">
+    <%= button_to "Add", new_user_path, :method => :get, :class => "btn btn-primary" %>
+    </br>
+    </br>
+    <div class = "pull-right">
+        <b>Search:</b> <input ng-model="searchText">
+    </div>
+    
+    </br>
+    </br>
+    
+    <table class = "table table-hover table-striped">
+      <thead>
+        <tr>
+            <th><a href="" ng-click="predicate = 'name'; reverse=false">Name</a>
+            (<a href="" ng-click="predicate = '-name'; reverse=false">^</a>)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users | filter:searchText | orderBy:predicate:reverse">
+            <td><a href ="/profile?id={{user.id}}">{{user.name}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+</div>

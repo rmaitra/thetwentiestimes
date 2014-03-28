@@ -1,0 +1,11 @@
+App.controller('IndexCtrl', ['$scope', '$location', function($scope, $location){
+    $scope.message = "Welcome to NextList";
+    
+    $scope.changeView = function(){
+        console.log('hello');
+        $location.url('/users_index');
+        $scope.$apply();
+    }
+    
+}]);
+

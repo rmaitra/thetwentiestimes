@@ -1,0 +1,20 @@
+App.controller('UsersCtrl', ['$scope', '$location', 'User', function($scope, $location, User){
+    $scope.message = "Angular Rocks!"
+    $scope.new_user = null
+    $scope.users = User.query()
+
+    $scope.save_user = () ->
+    console.log($scope.new_user)
+
+    $scope.viewUser = (id) ->
+        $location.url('/users/'+id)
+
+    $scope.destroy = (index) ->
+
+        User.remove({id: $scope.users[index].id}, () ->
+            $scope.users.splice(index, 1);
+        );
+
+  
+}]);
+

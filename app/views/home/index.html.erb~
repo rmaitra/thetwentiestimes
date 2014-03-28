@@ -1,0 +1,8 @@
+<div class = "jumbotron" id = "index_main" ng-controller="IndexCtrl">
+    <h1><span id = "logo">N<font size = "12">L</font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Next</b>List</h1>
+    <div id = "small_box"></div>
+</div>
+
+
+
+
