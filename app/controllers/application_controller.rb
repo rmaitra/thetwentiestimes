@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
     #after_filter :set_csrf_cookie_for_ng
 
-    before_filter :authenticate
+    #before_filter :authenticate
     include SessionsHelper
     helper_method :logged_in?
   

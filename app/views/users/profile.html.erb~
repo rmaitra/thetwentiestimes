@@ -1,5 +1,6 @@
 
-<div ng-controller="ProfileCtrl" ng-init="init('<%= @user.id %>')">
+
+<div class = "container" ng-controller="ProfileCtrl" ng-init="init('<%= @user.id %>')">
     <div class="panel panel-primary">
         <!-- Default panel contents -->
         <div class="panel-heading">
@@ -10,31 +11,18 @@
             <ul class="nav nav-tabs">
                 <li class="active">
                     <a href="#">
-                        Notifications <span class="badge">42</span>
+                        Messages <span class="badge">42</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        My Posts <span class="badge">42</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        My Messages  <span class="badge">42</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        My Profile
+                        My Articles <span class="badge">{{posts.length}}</span>
                     </a>
                 </li>
             </ul>
         <% end %>
             
         <div class="panel-body">
-        </div>
-        
-        <div class = "container">
             <table class = "table table-hover table-striped">
                 <thead>
                     <tr>
@@ -55,24 +43,23 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        
-        <div class="modal" id="modalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">{{post.title}}</h4>
-                </div>
-                <div class="modal-body">
-                    {{post.content}}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+            
+            <div class="modal" id="modalPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">{{post.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        {{post.content}}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
     
     </div>
 </div>
